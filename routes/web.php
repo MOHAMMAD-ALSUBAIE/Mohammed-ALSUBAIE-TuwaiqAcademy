@@ -35,3 +35,6 @@ Route::get('/phonedieplay', function () {
 Route::get('/oldphone', function () {
     return view("old.oldphone");
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
